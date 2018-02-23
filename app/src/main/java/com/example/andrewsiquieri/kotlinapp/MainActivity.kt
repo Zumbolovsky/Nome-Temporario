@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val botao = findViewById < Button >(R.id.ola)
+        val botao = findViewById <Button>(R.id.ola)
         botao.setOnClickListener {
             val main = Intent(this, MainMenu::class.java)
             startActivity(main)

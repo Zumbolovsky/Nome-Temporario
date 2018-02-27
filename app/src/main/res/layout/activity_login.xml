@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:screenOrientation="portrait"
-    tools:context="com.example.andrewsiquieri.kotlinapp.MainActivity">
+    tools:context="com.example.andrewsiquieri.kotlinapp.LoginActivity">
 
     <ImageView
         android:id="@+id/logoImg"

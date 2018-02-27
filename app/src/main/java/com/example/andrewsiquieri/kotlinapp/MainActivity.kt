@@ -3,7 +3,9 @@ package com.example.andrewsiquieri.kotlinapp
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
+import android.view.Gravity
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,16 +13,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val botao = findViewById <Button>(R.id.ola)
-        botao.setOnClickListener {
-            val main = Intent(this, MainMenu::class.java)
-            startActivity(main)
-        }
-
-        val buttonList = findViewById <Button>(R.id.list)
-        buttonList.setOnClickListener {
-            val main = Intent(this, ListActivity::class.java)
-            startActivity(main)
+        val btLogin = loginBtn
+        btLogin.setOnClickListener {
+            val usuario = userField.text.toString()
+            val senha = passField.text.toString()
+            if (usuario == "admin" && senha == "admin") {
+                val main = Intent(this, ListActivity::class.java)
+                startActivity(main)
+            } else {
+                Toast.makeText(this, "Usuário e/ou senha inválido(s)!", Toast.LENGTH_LONG).show()
+            }
         }
 
     }

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Kotlin App</string>
+    <string name="app_name">Estagario</string>
+    <string name="logoImg_description">Imagem de logo para a tela de login</string>
+    <string name="loginBtn_description">Botão de login de usuário</string>
+    <string name="loginBtn_text">Login</string>
+    <string name="userField_hint">Usuário</string>
+    <string name="passField_hint">Senha</string>
 </resources>

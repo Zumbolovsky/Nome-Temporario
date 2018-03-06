@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Nome-Temporario.iml" filepath="$PROJECT_DIR$/Nome-Temporario.iml" />
-      <module fileurl="file://C:\Users\andrew.siquieri\AndroidStudioProjects\Nome-Temporario\Nome-Temporario.iml" filepath="C:\Users\andrew.siquieri\AndroidStudioProjects\Nome-Temporario\Nome-Temporario.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

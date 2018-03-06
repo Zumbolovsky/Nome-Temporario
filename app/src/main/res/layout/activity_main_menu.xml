@@ -15,73 +15,122 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
-        <android.support.constraint.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/userImg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/incognito_foreground"
-                tools:layout_editor_absoluteX="139dp"
-                tools:layout_editor_absoluteY="33dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/plusImg"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@mipmap/plus_foreground"
-                tools:layout_editor_absoluteX="197dp"
-                tools:layout_editor_absoluteY="91dp" />
+                <ImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="139dp"
+                    android:layout_marginStart="139dp"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/cadastroPessoalImagem"
+                    app:srcCompat="@mipmap/incognito_foreground"
+                    tools:layout_editor_absoluteX="207dp"
+                    tools:layout_editor_absoluteY="357dp" />
 
-            <EditText
-                android:id="@+id/nomeField"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginStart="32dp"
-                android:ems="10"
-                android:fontFamily="sans-serif-condensed"
-                android:hint="Nome Completo"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="177dp" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/userImg"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:backgroundTint="@color/cardview_shadow_end_color"
+                    app:elevation="0dp"
+                    app:rippleColor="@color/cardview_shadow_end_color"
+                    app:srcCompat="@mipmap/plus_foreground"
+                    tools:layout_editor_absoluteX="207dp"
+                    tools:layout_editor_absoluteY="101dp" />
+            </RelativeLayout>
 
-            <EditText
-                android:id="@+id/emailField"
-                android:layout_width="322dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:fontFamily="sans-serif-condensed"
-                android:hint="E-mail"
-                android:inputType="textEmailAddress"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nomeField" />
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/faculField"
-                android:layout_width="317dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginStart="32dp"
-                android:ems="10"
-                android:hint="Faculdade"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="298dp" />
+                <EditText
+                    android:id="@+id/tituloField"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/cadastroPessoalNome"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/guideline2"
+                    tools:ignore="MissingConstraints" />
 
-        </android.support.constraint.ConstraintLayout>
+                <EditText
+                    android:id="@+id/logradouroField"
+                    android:layout_width="322dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/cadastroPessoalLogradouro"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tituloField" />
 
+                <Spinner
+                    android:id="@+id/estadosSpinner"
+                    android:layout_width="127dp"
+                    android:layout_height="46dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cidadeField"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logradouroField" />
+
+                <EditText
+                    android:id="@+id/cidadeField"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/cadastroPessoalCidade"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logradouroField" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="0dp" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="0dp" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

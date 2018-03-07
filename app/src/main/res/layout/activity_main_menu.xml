@@ -8,6 +8,7 @@
 
 
     <ScrollView
+        android:id="@+id/cadastroPessoalScrollView"
         android:layout_width="386dp"
         android:layout_height="513dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,11 +19,13 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
+            android:id="@+id/cadastroPessoalLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/cadastroPessoalRelativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -41,7 +44,7 @@
                     tools:layout_editor_absoluteY="357dp" />
 
                 <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/floatingActionButton"
+                    android:id="@+id/floatButtonAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/userImg"
@@ -57,12 +60,13 @@
             </RelativeLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/cadastroPessoalConstraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/tituloField"
-                    android:layout_width="320dp"
+                    android:layout_width="322dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
                     android:layout_marginStart="32dp"
@@ -72,8 +76,8 @@
                     android:hint="@string/cadastroPessoalNome"
                     android:inputType="textPersonName"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -116,19 +120,80 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/logradouroField" />
 
-                <android.support.constraint.Guideline
-                    android:id="@+id/guideline"
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/numeroField"
+                    android:layout_width="322dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_begin="0dp" />
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/cadastroPessoalNumero"
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/estadosSpinner" />
 
-                <android.support.constraint.Guideline
-                    android:id="@+id/guideline2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="0dp" />
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/usuarioConstraintLayout"
+                    android:layout_width="322dp"
+                    android:layout_height="183dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/layout_border"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/numeroField">
+
+                    <TextView
+                        android:id="@+id/usuarioText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="245dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/cadastroPessoalUsuario"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/emailField"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/cadastroPessoalEmail"
+                        android:inputType="textEmailAddress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/usuarioText" />
+
+                    <EditText
+                        android:id="@+id/senhaField"
+                        android:layout_width="290dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/cadasroPessoalSenha"
+                        android:inputType="textPassword"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/emailField" />
+                </android.support.constraint.ConstraintLayout>
 
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>

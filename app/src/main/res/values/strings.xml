@@ -1,10 +1,14 @@
 <resources>
     <string name="app_name">Kotlin App</string>
     <string name="cadastroPessoalNome">Nome</string>
-    <string name="cadastroPessoalLogradouro">Logradouro (e número)</string>
+    <string name="cadastroPessoalLogradouro">Logradouro</string>
     <string name="cadastroPessoalCidade">Cidade</string>
     <string name="cadastroPessoalImagem">Imagem do usuário</string>
-    <string-array name="estados">
+    <string name="cadastroPessoalEmail">E-mail</string>
+    <string name="cadastroPessoalNumero">(DDD) Número</string>
+    <string name="cadastroPessoalUsuario">Usuário</string>
+    <string name="cadasroPessoalSenha">Senha</string>
+    <string-array name="cadasroPessoalEstados">
         <item>Estado</item>
         <item>AC</item>
         <item>AL</item>

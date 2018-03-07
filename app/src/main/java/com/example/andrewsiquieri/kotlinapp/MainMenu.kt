@@ -18,7 +18,7 @@ class MainMenu : AppCompatActivity() {
 
         var spinner = estadosSpinner
 
-        val listaEstados: List<String> = ArrayList(R.array.estados)
+        val listaEstados: List<String> = ArrayList(R.array.cadasroPessoalEstados)
         // Create an ArrayAdapter using the string array and a default spinner layout
         val adapter = object : ArrayAdapter<String>(this, R.layout.activity_main_menu, R.id.estadosSpinner, listaEstados) {
             override fun isEnabled(position: Int): Boolean {

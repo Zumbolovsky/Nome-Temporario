@@ -8,7 +8,7 @@
     <string name="cadastroPessoalNumero">(DDD) Número</string>
     <string name="cadastroPessoalUsuario">Usuário</string>
     <string name="cadasroPessoalSenha">Senha</string>
-    <string-array name="cadasroPessoalEstados">
+    <string-array name="cadastroPessoalEstados">
         <item>Estado</item>
         <item>AC</item>
         <item>AL</item>

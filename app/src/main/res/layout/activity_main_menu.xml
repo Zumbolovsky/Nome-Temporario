@@ -7,10 +7,26 @@
     tools:context="com.example.andrewsiquieri.kotlinapp.MainMenu">
 
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineCHF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineCVF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="0dp" />
+
     <ScrollView
         android:id="@+id/cadastroPessoalScrollView"
-        android:layout_width="386dp"
-        android:layout_height="513dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,8 +40,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/cadastroPessoalRelativeLayout"
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cadastroPessoalConstraintLayoutImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -35,136 +51,162 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginEnd="139dp"
-                    android:layout_marginStart="139dp"
+                    android:layout_marginEnd="138dp"
+                    android:layout_marginStart="138dp"
                     android:layout_marginTop="32dp"
                     android:contentDescription="@string/cadastroPessoalImagem"
-                    app:srcCompat="@mipmap/incognito_foreground"
-                    tools:layout_editor_absoluteX="207dp"
-                    tools:layout_editor_absoluteY="357dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/incognito_foreground" />
 
                 <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/floatButtonAdd"
+                    android:id="@+id/floatingButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/userImg"
                     android:layout_alignParentBottom="true"
                     android:clickable="true"
                     android:focusable="true"
-                    app:backgroundTint="@color/cardview_shadow_end_color"
+                    android:paddingBottom="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="0dp"
+                    app:backgroundTint="@android:color/transparent"
+                    app:borderWidth="0dp"
                     app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/userImg"
                     app:rippleColor="@color/cardview_shadow_end_color"
                     app:srcCompat="@mipmap/plus_foreground"
-                    tools:layout_editor_absoluteX="207dp"
-                    tools:layout_editor_absoluteY="101dp" />
-            </RelativeLayout>
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"/>
+
+            </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/cadastroPessoalConstraintLayout"
+                android:id="@+id/cadastroPessoalConstraintLayoutForm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineHI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="16dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineVI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="32dp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineVF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="34dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintGuide_end="32dp" />
+
                 <EditText
                     android:id="@+id/tituloField"
-                    android:layout_width="322dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
                     android:ems="10"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="@string/cadastroPessoalNome"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineVI"
+                    app:layout_constraintTop_toTopOf="@+id/guidelineHI"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
                     android:id="@+id/logradouroField"
-                    android:layout_width="322dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="@string/cadastroPessoalLogradouro"
                     android:inputType="textEmailAddress"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineVI"
                     app:layout_constraintTop_toBottomOf="@+id/tituloField" />
 
                 <Spinner
-                    android:id="@+id/estadosSpinner"
+                    android:id="@+id/estadoSpinner"
                     android:layout_width="127dp"
                     android:layout_height="46dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/cidadeField"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineVI"
                     app:layout_constraintTop_toBottomOf="@+id/logradouroField" />
 
                 <EditText
                     android:id="@+id/cidadeField"
-                    android:layout_width="175dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="@string/cadastroPessoalCidade"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
+                    app:layout_constraintStart_toEndOf="@+id/estadoSpinner"
                     app:layout_constraintTop_toBottomOf="@+id/logradouroField" />
 
                 <EditText
                     android:id="@+id/numeroField"
-                    android:layout_width="322dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:fontFamily="sans-serif-condensed"
                     android:hint="@string/cadastroPessoalNumero"
                     android:inputType="phone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/estadosSpinner" />
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineVI"
+                    app:layout_constraintTop_toBottomOf="@+id/estadoSpinner" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/usuarioConstraintLayout"
-                    android:layout_width="322dp"
+                    android:layout_width="0dp"
                     android:layout_height="183dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginStart="32dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/layout_border"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineVI"
                     app:layout_constraintTop_toBottomOf="@+id/numeroField">
 
                     <TextView
                         android:id="@+id/usuarioText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="245dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:fontFamily="sans-serif-condensed"
                         android:text="@string/cadastroPessoalUsuario"
                         android:textSize="20sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
                         android:id="@+id/emailField"
-                        android:layout_width="290dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:layout_marginStart="16dp"
@@ -179,7 +221,7 @@
 
                     <EditText
                         android:id="@+id/senhaField"
-                        android:layout_width="290dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginEnd="16dp"
@@ -198,4 +240,5 @@
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

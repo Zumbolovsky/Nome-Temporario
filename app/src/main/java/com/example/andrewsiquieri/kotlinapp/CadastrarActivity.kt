@@ -8,18 +8,17 @@ import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import com.example.andrewsiquieri.kotlinapp.ui.adapter.SpinnerAdapter
-import kotlinx.android.synthetic.main.activity_main_menu.*
+import kotlinx.android.synthetic.main.activity_cadastrar.*
 
-
-class MainMenu : AppCompatActivity() {
+class CadastrarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_menu)
+        setContentView(R.layout.activity_cadastrar)
 
         val spinner: Spinner = estadoSpinner
 
-        val listaEstados  = resources.getStringArray(R.array.cadastroPessoalEstados).toMutableList()
+        val listaEstados = resources.getStringArray(R.array.cadastroPessoalEstados).toMutableList()
 
         val spinnerAdapter = SpinnerAdapter(this, android.R.layout.simple_spinner_dropdown_item)
 
@@ -45,7 +44,7 @@ class MainMenu : AppCompatActivity() {
         val botaoConfirmar: Button = cadastrarButton
 
         botaoConfirmar.setOnClickListener({
-            val main = Intent(this, MainActivity::class.java)
+            val main = Intent(this, LoginActivity::class.java)
             startActivity(main)
 
             Toast.makeText(this, "Usuário adicionado!", Toast.LENGTH_LONG).show()

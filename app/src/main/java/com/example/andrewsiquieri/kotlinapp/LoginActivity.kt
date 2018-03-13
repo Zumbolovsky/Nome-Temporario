@@ -12,10 +12,16 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val btLogin = loginBtn
+        val btCadastrar = cadastrarButton
+        btCadastrar.setOnClickListener {
+            val main = Intent(this, CadastrarActivity::class.java)
+            startActivity(main)
+        }
+
+        val btLogin = loginButton
         btLogin.setOnClickListener {
             val usuario = userField.text.toString()
-            val senha = passField.text.toString()
+            val senha = senhaField.text.toString()
             if (usuario == "admin" && senha == "admin") {
                 val main = Intent(this, ListActivity::class.java)
                 startActivity(main)

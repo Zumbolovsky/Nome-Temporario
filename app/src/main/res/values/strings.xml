@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Estagario</string>
-    <string name="logoImg_description">Imagem de logo para a tela de login</string>
-    <string name="loginBtn_description">Botão de login de usuário</string>
-    <string name="loginBtn_text">Login</string>
-    <string name="userField_hint">Usuário</string>
-    <string name="passField_hint">Senha</string>
+    <string name="loginPessoalImagem">Imagem de logo para a tela de login</string>
+    <string name="loginPessoalConfirmar">Login</string>
+    <string name="loginPessoalCadastrar">Cadastre-se</string>
+    <string name="loginPessoalUsuario">Usuário (e-mail)</string>
+    <string name="loginPessoalSenha">Senha</string>
     <string name="cadastroPessoalNome">Nome</string>
     <string name="cadastroPessoalLogradouro">Logradouro</string>
     <string name="cadastroPessoalCidade">Cidade</string>

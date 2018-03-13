@@ -120,6 +120,14 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintGuide_end="32dp" />
 
+                <LinearLayout
+                    android:id="@+id/utilFocus"
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal" />
+
                 <EditText
                     android:id="@+id/tituloField"
                     android:layout_width="0dp"
@@ -148,9 +156,13 @@
 
                 <Spinner
                     android:id="@+id/estadoSpinner"
-                    android:layout_width="127dp"
-                    android:layout_height="46dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/numeroField"
+                    app:layout_constraintEnd_toStartOf="@+id/cidadeField"
                     app:layout_constraintStart_toStartOf="@+id/guidelineVI"
                     app:layout_constraintTop_toBottomOf="@+id/logradouroField" />
 
@@ -158,7 +170,7 @@
                     android:id="@+id/cidadeField"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:ems="10"
                     android:fontFamily="sans-serif-condensed"
@@ -179,7 +191,7 @@
                     android:inputType="phone"
                     app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
                     app:layout_constraintStart_toStartOf="@+id/guidelineVI"
-                    app:layout_constraintTop_toBottomOf="@+id/estadoSpinner" />
+                    app:layout_constraintTop_toBottomOf="@+id/cidadeField" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/usuarioConstraintLayout"
@@ -229,7 +241,7 @@
                         android:layout_marginTop="16dp"
                         android:ems="10"
                         android:fontFamily="sans-serif-condensed"
-                        android:hint="@string/cadasroPessoalSenha"
+                        android:hint="@string/cadastroPessoalSenha"
                         android:inputType="textPassword"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

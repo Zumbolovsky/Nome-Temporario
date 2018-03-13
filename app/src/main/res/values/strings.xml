@@ -12,9 +12,11 @@
     <string name="cadastroPessoalEmail">E-mail</string>
     <string name="cadastroPessoalNumero">(DDD) Número</string>
     <string name="cadastroPessoalUsuario">Usuário</string>
-    <string name="cadasroPessoalSenha">Senha</string>
+    <string name="cadastroPessoalSenha">Senha</string>
+    <string name="cadastroPessoalEstado">Estado</string>
+    <string name="fontName">sans-serif-condensed</string>
     <string-array name="cadastroPessoalEstados">
-        <item>Estado</item>
+        <item></item>
         <item>AC</item>
         <item>AL</item>
         <item>AP</item>

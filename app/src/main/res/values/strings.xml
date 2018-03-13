@@ -9,6 +9,7 @@
     <string name="cadastroPessoalUsuario">Usuário</string>
     <string name="cadastroPessoalSenha">Senha</string>
     <string name="cadastroPessoalEstado">Estado</string>
+    <string name="cadastroPessoalConfirmar">CADASTRAR</string>
     <string name="fontName">sans-serif-condensed</string>
     <string-array name="cadastroPessoalEstados">
         <item></item>

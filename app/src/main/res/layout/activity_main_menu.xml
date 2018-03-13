@@ -247,7 +247,23 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/emailField" />
+
                 </android.support.constraint.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/cadastrarButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/cadastroPessoalConfirmar"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineVF"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineVI"
+                    app:layout_constraintTop_toBottomOf="@+id/usuarioConstraintLayout"
+                    app:layout_constraintVertical_bias="0.0" />
 
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
